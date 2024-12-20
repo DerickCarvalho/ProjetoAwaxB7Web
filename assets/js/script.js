@@ -45,3 +45,19 @@ clientPointers.forEach((pointer, index) => {
         slideClient.style.marginLeft = `-${index * 100}vw`;
     });
 });
+
+// SLIDE DOS PRODUCTS
+
+const productsPointer = document.querySelectorAll('.pointer-produtc');
+var slideProduct = document.getElementById('slide-products');
+
+productsPointer.forEach((pointer, index) => {
+    pointer.addEventListener('click', () => {
+        productsPointer.forEach(pointerRemoveClass => {
+            pointerRemoveClass.classList.remove('active');
+        });
+
+        pointer.classList.add('active');
+        slideProduct.style.marginLeft = `-${index * 100}vw`;
+    });
+});
